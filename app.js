@@ -25,7 +25,7 @@ app.use('/', ranking_routes);
 
 //invalid route handling
 app.use((req, res, next)=> {
-    res.status(404).send({ message: "Bad request: Route Not Found" });
+    res.status(404).json({ message: "Bad request: Route Not Found" });
   });  
 
 //STARTS SERVER
