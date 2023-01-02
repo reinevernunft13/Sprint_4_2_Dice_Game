@@ -3,9 +3,8 @@ const mysql = require('mysql2/promise');
 const { mysqlConfig } = require('../config/database');
 
 //SET UP CONNECTION WITH DB
-const { port, host, username, password } = mysqlConfig; 
+const { db_name, port, host, username, password } = mysqlConfig; 
 
-const db_name = 'DADITOS_GAME_DB'; 
 //Instantiate sequelize to create connection
 const sequelize = new Sequelize(db_name, username, password, {
   host,

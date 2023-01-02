@@ -1,11 +1,9 @@
 # Sprint 4.2: DICE GAME - NODE REST + DB + JWT 🎲🎲 
 
-## 🗒️  Description
-
 - API implementation for a simple dice game on Node.Js, using:
- - **Express** -> for building REST APIs,
- - **MySql** -> for the database, 
- - **Sequelize** -> as ORM.
+    - **Express** -> for building REST APIs,
+    - **MySql** -> for the database, 
+    - **Sequelize** -> as ORM
 
 - In this game, two six-sided dice are thrown together. If the the sum of the dice is 7, it's a winning throw and the player wins. For further details on functionalities, check the endpoints section below.
    
@@ -24,7 +22,8 @@ In order for the project to work, please make sure the following technology is i
 > **Step 1** - Clone the project:
 
 ```
-gh repo clone reinevernunft13/nodeInitialDemo
+gh repo clone reinevernunft13/Sprint_4_2_Dice_Game
+
 ```
 
 > **Step 2** - Install the necessary dependencies via NPM:
