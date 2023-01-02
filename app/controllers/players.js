@@ -1,33 +1,12 @@
 'use strict'
 
 const Player = require('../models/player_mysql.js');
-//const Throw = require('../models/throw_mysql');
-
-/*//WORKS
-const playerExists = async(req, res) => {
-  const id = req.params.id; 
-  Player.findByPk(id)
-  .then(data => {
-    if (data) {
-      res.send(data);
-    } else {
-      res.status(404).send({
-        message: `Sorry, we're unable to find player with id# ${id}.`
-      });
-    }
-  })
-  .catch(err => {
-    res.status(500).send({
-      message: `Error retrieving player with id# ${id}`
-    });
-  });
-};*/
 
 const createPlayer = async (req, res) => {
+  
   const name = req.body.name;
   let player;
   try {
-   
     //finds player by name 
     if(name) {
         const foundName = await Player.findOne({
@@ -99,7 +78,10 @@ const getPlayers = async(req, res) => {
   try {
     
     const players = await Player.findAll();
-    res.status(200).json(players);
+    /*if(players === 'null') {
+      return res.status(204).json({ message: 'No content'});
+    } */
+    return res.status(200).json({ players });
 
   } catch (err) {
     return res.status(500).send({ message: err.message });
